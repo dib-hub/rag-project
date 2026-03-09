@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "@langchain/core": "^1.1.31",
+    "@langchain/openai": "^1.2.12",
+    "@langchain/pinecone": "^1.0.1",
+    "@nestjs/common": "^11.1.16",
+    "@nestjs/core": "^11.1.16",
+    "@nestjs/platform-express": "^11.1.16",
+    "@pinecone-database/pinecone": "^5.1.2",
+    "@prisma/client": "^7.4.2",
+    "dotenv": "^17.3.1",
+    "langchain": "^1.2.30",
+    "openai": "^6.27.0",
+    "prisma": "^7.4.2",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.16",
+    "@types/node": "^25.3.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "start": "ts-node src/main.ts",
+    "start:dev": "ts-node src/main.ts",
+    "build": "tsc"
+  }
+}
