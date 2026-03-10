@@ -13,10 +13,11 @@ export class RagController {
 
     const normalizedQuestion = question.trim();
     const answer = await this.ragService.ask(normalizedQuestion);
+    const normalizedAnswer = answer.replace(/\s*\n+\s*/g, ' ').replace(/\s{2,}/g, ' ').trim();
 
     return {
       question: normalizedQuestion,
-      answer,
+      answer: normalizedAnswer,
     };
   }
 }
