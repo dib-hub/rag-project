@@ -1,20 +1,19 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable } from "@nestjs/common";
 import { ChatOpenAI, OpenAIEmbeddings } from "@langchain/openai";
 
 @Injectable()
 export class LangchainService {
-
   getEmbeddings() {
     return new OpenAIEmbeddings({
-      openAIApiKey: process.env.OPENAI_API_KEY
+      apiKey: process.env.OPENAI_API_KEY,
+      model: "text-embedding-3-small",
     });
   }
 
   getLLM() {
     return new ChatOpenAI({
-      openAIApiKey: process.env.OPENAI_API_KEY,
-      modelName: "gpt-4o-mini"
+      apiKey: process.env.OPENAI_API_KEY,
+      model: "gpt-4o-mini",
     });
   }
-
 }
